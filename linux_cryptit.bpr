@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.10"/>
+    <PROJECT value="linux_cryptit"/>
+    <OBJFILES value="linux_cryptit.o about.o cryptcore.o cryptkey.o cyptit.o fileversion.o"/>
+    <RESFILES value="linux_cryptit.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) about.xfm cyptit.xfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="visualclx.a rtl.a"/>
+    <SPARELIBS value="rtl.a visualclx.a"/>
+    <PACKAGES value="rtl.bpi visualclx.bpi dataclx.bpi visualdbclx.bpi netclx.bpi 
+      netdataclx.bpi xmlrtl.bpi indy.bpi webdsnapclx.bpi websnapclx.bpi 
+      soaprtl.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)/lib/debug"/>
+    <RELEASELIBPATH value="$(BCB)/lib/release"/>
+    <LINKER value="ilink"/>
+    <USERDEFINES value="#define CLX_USE_LIBQT "/>
+    <SYSDEFINES value="_RTLDLL"/>
+    <MAINSOURCE value="linux_cryptit.cpp"/>
+    <INCLUDEPATH value="../..:sandbox/cryptit:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include"/>
+    <LIBPATH value="../..:sandbox/cryptit:$(BCB)/lib/obj:$(BCB)/lib:/usr/lib:/lib:/usr/X11R6/lib:$(BCB)/bin"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-t -O2 -H=$(HOME)/.borland/clx69.csm -Hc -Vx -Ve -fp -ff -X- -a8 -6 -b- 
+      -k- -vi -c"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="borinit.o crt1.o $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="rtle.a $(LIBFILES) $(LIBRARIES) libborcrtl.so libborstl.so libborunwind.so 
+      libpthread.so libX11.so libc.so libm.so libdl.so "/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="linux_cryptit.res" FORMNAME="" UNITNAME="linux_cryptit.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="linux_cryptit.cpp" FORMNAME="" UNITNAME="linux_cryptit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="about.cpp" FORMNAME="AboutBox" UNITNAME="about" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cryptcore.cpp" FORMNAME="" UNITNAME="cryptcore.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cryptkey.cpp" FORMNAME="" UNITNAME="cryptkey.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cyptit.cpp" FORMNAME="Form1" UNITNAME="cyptit" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fileversion.cpp" FORMNAME="" UNITNAME="fileversion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=../..:sandbox/cryptit:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=../..:sandbox/cryptit:$(BCB)/lib/obj:$(BCB)/lib:/usr/lib:/lib:/usr/X11R6/lib:$(BCB)/bin
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=#define CLX_USE_LIBQT 
+Item1=#define CLX_USE_LIBQT
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+Launcher=/usr/X11R6/bin/xterm -T KylixDebuggerOutput -e bash -i -c %debuggee%
+UseLauncher=0
+DebugCWD=
+HostApplication=
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>
